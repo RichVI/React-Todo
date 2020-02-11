@@ -1,11 +1,18 @@
 import React from 'react';
-import {TodoForm} from './components/TodoComponents/TodoForm';
-import {TodoList} from './components/TodoComponents/TodoList';
+import {TodoForm} from './components/TodoForm';
+import {TodoList} from './components/TodoList';
+import styled from 'styled-components';
+
+
+const Wrapper = styled.div`
+background-color: blue;
+color: white
+`
 
 
 const taskList = [
   {
-    task: "",
+    task: "To-dos",
     id: Date.now(),
     completed: false
   }
@@ -60,11 +67,11 @@ class App extends React.Component {
 
   render(){
     return(
-      <div>
+      <Wrapper>
         <h1>Task List</h1>
         <TodoList taskList={this.state.taskList} toggleTask={this.toggleTask}/>
         <TodoForm addNewTask={this.addNewTask} deleteCompletedTask={this.deleteCompletedTask}/>
-      </div>
+      </Wrapper>
     );
   }
 }
