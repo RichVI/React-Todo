@@ -1,0 +1,7 @@
+.taskcompleted {
+    text-decoration: line-through;
+  }
+
+.taskItems{
+  cursor: pointer;
+}
